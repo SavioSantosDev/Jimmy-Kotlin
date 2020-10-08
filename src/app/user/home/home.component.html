@@ -1,11 +1,55 @@
-<nav class="navbar">
-  <div class="container">
-    <ul class="nav">
-      <li class="nav-item"><a routerLink="" class="nav-link">HOME</a></li>
-      <li class="nav-item"><a routerLink="trabalhos" class="nav-link">TRABALHOS</a></li>
-      <li class="nav-item"><a routerLink="blog" class="nav-link">BLOG</a></li>
-      <li class="nav-item"><a routerLink="sobre" class="nav-link">SOBRE</a></li>
-      <li class="nav-item"><a routerLink="contato" class="nav-link">CONTATO</a></li>
-    </ul>
+<section class="home   pb-5 pt-2 d-flex align-items-stretch">
+  <div class="container d-flex justify-content-between flex-column">
+
+    <nav class="navbar navbar-light bg-transparent p-0">
+
+        <a class="navbar-brand  d-flex flex-column" routerLink="">
+          Jimmy Kotlin
+          <span>Fotógrafo da natureza</span>
+        </a>
+
+        <div class="menu-wrapper d-flex flex-row">
+          <div class="menu">
+            <ul class="navbar-nav d-flex flex-row" [class.menu-collapsed]="isCollapsed">
+                <li class="nav-item active">
+                  <a routerLink="" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="" class="nav-link">Trabalhos</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="contato" class="nav-link">Contato</a>
+                </li>
+            </ul>
+          </div>
+          <button class="menu-icon  btn" type="button" (click)="isCollapsed = !isCollapsed"></button>
+        </div>
+
+    </nav>
+
+    <div class="banner-content   row flex-column">
+      <h1 class="main-content   col-6 font-weight-bold">Lorem ipsum silor domor sit amet silun dar</h1>
+      <div class="sub-content   col-5 opacity-50">
+        vitae euismod. Nulla in ante dictum, ultricies lacus et, sollicitudin ex. Fusce nisl leo, dignissim a scelerisque nec, commodo ac sem.
+      </div>
+      <div class="col-3 mt-5">
+        <button type="button" class="cta   btn btn-outline-dark">Galeria de fotos</button>
+      </div>
+    </div>
+
+    <div class="social   row d-none d-lg-flex">
+      <div class="col-2 d-flex justify-content-between">
+        <a class="social-media"></a>
+        <a class="social-media"></a>
+        <a class="social-media"></a>
+      </div>
+    </div>
+
   </div>
-</nav>
+</section>
