@@ -9,3 +9,19 @@ body {
 .opacity-50{
   opacity: 50%;
 }
+
+p {
+  font-size: 21px;
+  line-height: 30px;
+  text-indent: 2rem;
+}
+
+.title {
+  font: bold 50px/60px 'Crimson Text', serif;
+}
+
+.subtitle {
+  font-size: 28px;
+  line-height: 38px;
+  color: var(--primary);
+}
