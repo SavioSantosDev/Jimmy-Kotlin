@@ -1,0 +1,7 @@
+<app-navbar [show] = "currentRoute !== '/'"></app-navbar>
+
+<main class="shadow-sm">
+  <router-outlet></router-outlet>
+</main>
+
+<app-footer [show] = "currentRoute !== '/'"></app-footer>

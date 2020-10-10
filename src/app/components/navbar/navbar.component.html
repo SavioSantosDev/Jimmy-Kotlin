@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-white p-0 shadow" [class.d-none]="!show">
+  <div class="container">
+
+    <a class="navbar-brand" routerLink="">
+      Jimmy Kotlin
+    </a>
+
+    <ul class="navbar-nav d-flex flex-row">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="trabalhos" class="nav-link">Trabalhos</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="trabalhos" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="sobre" class="nav-link">Sobre</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="contato" class="nav-link">Contato</a>
+        </li>
+    </ul>
+
+  </div>
+</nav>

@@ -11,21 +11,21 @@
         <div class="menu-wrapper d-flex flex-row">
           <div class="menu">
             <ul class="navbar-nav d-flex flex-row" [class.menu-collapsed]="isCollapsed">
-                <li class="nav-item active">
-                  <a routerLink="" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a routerLink="" class="nav-link">Trabalhos</a>
-                </li>
-                <li class="nav-item">
-                  <a routerLink="" class="nav-link">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a routerLink="sobre" class="nav-link">Sobre</a>
-                </li>
-                <li class="nav-item">
-                  <a routerLink="contato" class="nav-link">Contato</a>
-                </li>
+              <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a routerLink="" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a routerLink="trabalhos" class="nav-link">Trabalhos</a>
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a routerLink="trabalhos" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a routerLink="sobre" class="nav-link">Sobre</a>
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a routerLink="contato" class="nav-link">Contato</a>
+              </li>
             </ul>
           </div>
           <button class="menu-icon  btn" type="button" (click)="isCollapsed = !isCollapsed"></button>
@@ -39,15 +39,15 @@
         vitae euismod. Nulla in ante dictum, ultricies lacus et, sollicitudin ex. Fusce nisl leo, dignissim a scelerisque nec, commodo ac sem.
       </div>
       <div class="col-3 mt-5">
-        <button type="button" class="cta   btn btn-outline-dark">Galeria de fotos</button>
+        <button type="button" class="cta   btn btn-outline-dark" routerLink="trabalhos">Galeria de fotos</button>
       </div>
     </div>
 
     <div class="social   row d-none d-lg-flex">
       <div class="col-2 d-flex justify-content-between">
-        <a class="social-media"></a>
-        <a class="social-media"></a>
-        <a class="social-media"></a>
+        <a href="https://pt-br.facebook.com/" target="_blank" class="social-media"></a>
+        <a href="https://www.instagram.com/" target="_blank" class="social-media"></a>
+        <a href="https://br.pinterest.com/" target="_blank" class="social-media"></a>
       </div>
     </div>
 
