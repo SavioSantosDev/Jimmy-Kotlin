@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Event, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import {  Event, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent implements OnInit{
+export class UserComponent implements OnInit, OnDestroy {
 
   inscricao: Subscription;
   currentRoute: string;
@@ -40,8 +40,8 @@ export class UserComponent implements OnInit{
     });
   }
 
-  // ngOnDestroy() {
-  //   this.inscricao.unsubscribe;
-  // }
+  ngOnDestroy(): void {
+    this.inscricao.unsubscribe();
+  }
 
 }

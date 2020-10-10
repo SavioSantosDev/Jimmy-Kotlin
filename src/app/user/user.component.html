@@ -1,6 +1,7 @@
 <app-navbar [show] = "currentRoute !== '/'"></app-navbar>
 
-<main class="shadow-sm">
+<main class="shadow-sm py-5">
+  <app-breadcrumb ngIgf="currentRoute !== '/'"></app-breadcrumb>
   <router-outlet></router-outlet>
 </main>
 
