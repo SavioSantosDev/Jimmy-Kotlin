@@ -20,7 +20,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
   exports: [
     FooterComponent,
     NavbarComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
   ]
 })
 export class ComponentsModule { }

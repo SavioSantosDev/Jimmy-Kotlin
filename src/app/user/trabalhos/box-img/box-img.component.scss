@@ -1,0 +1,57 @@
+#img {
+  width: 100%;
+  padding-top: 56.25%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  .img-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .img-infos {
+      display: none;  // flex no hover
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .name {
+        font-size: 21px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+
+  .is-album {
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0.7) 0%, transparent 15%);
+  }
+
+  &:hover .img-content{
+    cursor: pointer;
+
+    &:not(.is-album) {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, transparent 15%);
+    }
+    &.is-album {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, transparent 15%, transparent 85%, rgba(0, 0, 0, 0.7) 100%,);
+    }
+
+    .img-infos { display: flex; }
+  }
+
+  svg path{
+    width: 32px;
+    height: 32px;
+    fill: white;
+  }
+}
+
+
